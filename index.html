@@ -13,14 +13,31 @@
 
 <body>
 
-  <div id="page">
+  <div id="page" class="loader-on">
+
+    <div class="loader">
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
     <div class="container-fluid">
       <div class="row align-items-start">
         <div class="col-lg-3">
           <div class="sidebar">
             <div class="avatar text-center">
-              <img src="assets/images/avatar_circle.png" alt="Alfe Caesar Lagas">
+              <div class="avatar-img-holder">
+                <img src="assets/images/avatar_circle.png" alt="Alfe Caesar Lagas">
+                <div class="circle-dot" id="complex-gradient-transition"></div>
+              </div>
             </div>
             <div class="profile-title text-center">
               <h3>Alfe Caesar L. Lagas</h3>
@@ -28,11 +45,11 @@
             </div>
             <div class="social-icons">
               <ul>
-                <li><a href="https://www.facebook.com/alfecaesar/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/alfecaesar/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/alfe-caesar-lagas-24663535"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://github.com/alfecaesar/"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://codepen.io/alfecaesar"><i class="fab fa-codepen"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/alfecaesar/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/alfecaesar/"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/alfe-caesar-lagas-24663535"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a target="_blank" href="https://github.com/alfecaesar/"><i class="fab fa-github"></i></a></li>
+                <li><a target="_blank" href="https://codepen.io/alfecaesar"><i class="fab fa-codepen"></i></a></li>
               </ul>
             </div>
 
@@ -212,7 +229,7 @@
                 <div class="row">
                   <div class="col-md-7">
                     <h1>I’m Alfe Caesar Lagas <br />
-                      <span>Front-end</span> Developer. </h1>
+                      <span>Front-end</span> Web Developer. </h1>
                       <p>An experienced web developer with expertise in CMS web development and web application.</p>
 
                       <p>Creative, independent worker, problem solver, and attention to detail.</p>
@@ -469,6 +486,7 @@
 
   <script src="./bootstrap/js/jquery.js"></script>
   <script src="./bootstrap/js/bootstrap.min.js" defer></script>
+  <script src="./js/gradientAnimation.js" defer></script>
   <script src="./js/script.js" defer></script>
 </body>
 

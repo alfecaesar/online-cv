@@ -24,7 +24,7 @@ a{
         }
 
         &:hover{
-            background-color: $gray2;
+            background-color: $green;
             color: $white;
             box-shadow: 0 0 25px 5px rgba(0,0,0,0.1);
 
@@ -40,8 +40,100 @@ body{
     font-family: $inter;
 
     #page{
+        position: relative;
+
+        &.loader-on{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+            .loader{
+                opacity: 0.9;
+                z-index: 100;
+            }
+        }
+
+        .loader{
+            background-color: $black;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 1;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: all ease-in-out 1s;
+
+            .lds-grid{
+                display: inline-block;
+                position: relative;
+                width: 80px;
+                height: 80px;
+
+                div {
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: $yellow;
+                    animation: lds-grid 1.2s linear infinite;
+
+                    &:nth-child(1) {
+                        top: 8px;
+                        left: 8px;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(2) {
+                        top: 8px;
+                        left: 32px;
+                        animation-delay: -0.4s;
+                    }
+                    &:nth-child(3) {
+                        top: 8px;
+                        left: 56px;
+                        animation-delay: -0.8s;
+                    }
+                    &:nth-child(4) {
+                        top: 32px;
+                        left: 8px;
+                        animation-delay: -0.4s;
+                    }
+                    &:nth-child(5) {
+                        top: 32px;
+                        left: 32px;
+                        animation-delay: -0.8s;
+                    }
+                    &:nth-child(6) {
+                        top: 32px;
+                        left: 56px;
+                        animation-delay: -1.2s;
+                    }
+                    &:nth-child(7) {
+                        top: 56px;
+                        left: 8px;
+                        animation-delay: -0.8s;
+                    }
+                    &:nth-child(8) {
+                        top: 56px;
+                        left: 32px;
+                        animation-delay: -1.2s;
+                    }
+                    &:nth-child(9) {
+                        top: 56px;
+                        left: 56px;
+                        animation-delay: -1.6s;
+                    }
+                }
+            }
+        }
 
         .container-fluid{
+            position: relative;
+            z-index: 5;
 
             .sticky-col{
                 position: sticky;
@@ -60,6 +152,35 @@ body{
 
                 .avatar{
                     margin: 0 0 30px 0;
+
+                    .avatar-img-holder{
+                        max-width: 150px;
+                        width: 100%;
+                        position: relative;
+                        margin: 0 auto;
+
+                        img{
+                            border: 5px solid $gray;
+                            border-radius: 50%;
+                            transition: all ease-in-out 0.3s;
+                            width: 100%;
+
+                            &:hover{
+                                border: 5px solid $green;
+                            }
+                        }
+
+                        .circle-dot{
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background-color: $green;
+                            position: absolute;
+                            bottom: 6px;
+                            right: 17px;
+                            border: 3px solid $white;
+                        }
+                    }
                 }
 
                 .profile-title{
@@ -359,6 +480,9 @@ body{
                                     h5{
                                         color: $black;
                                         margin: 0 0 10px 0;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
 
                                         i{
                                             color: $yellow;
@@ -370,11 +494,21 @@ body{
                                     p{
                                         color: $black;
                                         margin: 0 0 10px 0;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
 
                                         i{
                                             color: $yellow;
                                             font-size: 20px;
                                             margin-right: 10px;
+                                        }
+                                    }
+
+                                    ul.list-group{
+                                        li.list-group-item{
+                                            padding-left: 0px;
+                                            padding-right: 0px;
                                         }
                                     }
                                 }
@@ -482,7 +616,14 @@ body{
 }
 
 
-
+@keyframes lds-grid {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+}
 
 
 

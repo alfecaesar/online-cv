@@ -1,6 +1,20 @@
 
 window.addEventListener('load', (event) => {
 
+    // loader
+    const loaderStat = localStorage.getItem('loader');
+    if(!loaderStat){
+        setTimeout(function(){
+            document.querySelector('#page').classList.remove('loader-on');
+            localStorage.setItem('loader',false);
+        },5000)
+    }
+    else{
+        setTimeout(function(){
+            document.querySelector('#page').classList.remove('loader-on');
+        },500)
+    }
+
     // scroll To
     document.querySelectorAll('a.scrollBtn').forEach(function(elem){
         elem.addEventListener('click', (e) => {
