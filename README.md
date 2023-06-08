@@ -1,7 +1,7 @@
 # Alfe Caesar Lagas
 ## Online Portfolio
 
-[Github Page](https://alfecaesar.github.io/my-online-portfolio/)
+[Github Page](https://alfecaesar.github.io/online-cv/)
 
 ### Template Includes
 
