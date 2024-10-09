@@ -707,3 +707,25 @@ $total: 5;
     }
   }
 }
+
+
+.tab-selector{
+    display: flex;
+    gap: 10px !important;
+    padding-bottom: 0px !important;
+
+    a{
+        display: block;
+        background-color: $yellow;
+        padding: 5px 10px; 
+        color: $black;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all ease-in-out 0.3s;
+
+        &:hover,
+        &.active{
+            background-color: $green;
+        }
+    }
+}
