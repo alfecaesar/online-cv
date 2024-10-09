@@ -27,5 +27,20 @@ window.addEventListener('load', (event) => {
         })
     })
 
+    document.querySelectorAll('.tab-selector a').forEach(function(elem){
+        elem.addEventListener('click', (e) => {
+            e.preventDefault()
+            let gethref = elem.getAttribute('href').replace('#','')
+            document.querySelectorAll('.tab-content .card').forEach(function(card){
+                if(card.classList.contains(`card-${gethref}`)){
+                    card.style.display = "block"
+                }
+                else{
+                    card.style.display = "none"
+                }
+            })
+            
+        })
+    })
 
 })
